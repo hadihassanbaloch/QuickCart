@@ -1,5 +1,48 @@
-__pycache__
-assets/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual envs
 venv/
-data/
+env/
+.venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Env variables
 .env
+.env.*
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Pylint
+pylint-report.txt
+pylint-global.txt
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+assets/
+data/
