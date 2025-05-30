@@ -1,0 +1,124 @@
+.product-grid-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 14px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* ✅ Custom horizontal scroll bar (only on hover) */
+.product-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.product-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-grid::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-grid:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+/* ✅ Individual Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  transition: transform 0.2s ease;
+  flex: 0 0 auto; /* prevent shrinking */
+  width: 220px;
+  scroll-snap-align: start;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.add-to-cart {
+  align-self: flex-end;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #333;
+  border: 2px solid var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 4px 0 0;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #555;
+}
+
+.category-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 700;
+  margin: 40px 0 10px;
+  position: relative;
+}
+
+.category-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  margin-top: 6px;
+}
